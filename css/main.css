@@ -1,0 +1,47 @@
+.name,.category,.price,.taxes,.discount,.count,.total{
+    display: inline-flex;
+    padding-left: 50px;
+}
+label{
+    width: 200px;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+input{
+    width: 200px;
+}
+#total{
+    font-size: 18px;
+    background-color:#dc3545;
+    padding: 3px;
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.searchBlock{
+    width: 100%;
+    display: flex;
+}
+.iconSearch{
+    position: relative;
+    width: 50px;
+    height: 35px;
+    margin-top: 1px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+.searchBtns{
+    width: 100%;
+}
+.searchName{
+    width: 45%;
+}
+.searchCategory{
+    width: 45%;
+}
+th,td{
+    padding: 5px;
+}

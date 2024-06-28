@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Product Management System</title>
+</head>
+
+<body class="bg-dark text-white">
+
+    <div class="head">
+        <h2 class="text-center m-3">PRODUCTS</h2>
+    </div>
+    <!----------------------------------Start The Inputs------------------------------------------>
+    <div class="inputs">
+
+        <div class="container">
+
+            <!----------------------------------Start The Row1------------------------------------------>
+
+
+            <div class="name mt-3">
+                <label for="#name">Name</label>
+                <input id="name" class="bg-dark text-light rounded" type="text" id="name">
+            </div>
+            <div class="category mt-3">
+                <label for="#catg">Category</label>
+                <input id="category" class="bg-dark text-light rounded" type="text" id="catg">
+            </div>
+
+            <!---------------------------------End The Row1------------------------------------------>
+
+            <!--------------------------------Start The Row2------------------------------------------>
+
+
+            <div class="price mt-3">
+                <label for="#price">Price</label>
+                <input onkeyup="getTotal()" id="price" class="bg-dark text-light rounded" type="number">
+            </div>
+            <div class="taxes mt-3">
+                <label for="#taxes">Taxes</label>
+                <input onkeyup="getTotal()" id="taxes" class="bg-dark text-light rounded" type="number">
+            </div>
+            <div class="discount mt-3 ">
+                <label for="#discount">Discount</label>
+                <input onkeyup="getTotal()" id="discount" class="bg-dark text-light rounded" type="number">
+            </div>
+
+            <!----------------------------------End The Row2------------------------------------------>
+
+            <!---------------------------------Start The Row3------------------------------------------>
+
+            <div class="count mt-3">
+                <label id="Lcount" for="#count">Count</label>
+                <input id="count" class="bg-dark text-light rounded " type="number">
+            </div>
+            <div class="total mt-3 ">
+                <label for="#total">Total</label>
+                <small id="total"></small>
+            </div>
+
+            <!----------------------------------End The Row3------------------------------------------>
+
+            <div class="row justify-content-center row4 mt-2">
+                <button id="create" type="submit" class="btn btn-primary w-100 rounded">Create</button>
+            </div>
+
+        </div>
+
+    </div>
+    <!---------------------------------End The Inputs------------------------------------------>
+
+    <hr class="bg-danger">
+
+    <!-------------------------------Start The outputs------------------------------------------>
+    <div class="container">
+        <div class="outputs">
+            <div class="row text-center row1">
+                <div class="searchBlock mt-2">
+                    <input onkeyup="searchData(this.value)" id="search" type="text" placeholder="Search"
+                        class="form-control search bg-dark text-light rounded ">
+                    <svg onclick="searchData(search.value)" id="imgSearch"
+                        class="iconSearch form-control rounded bg-dark" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <path
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg>
+                </div>
+            </div>
+            <!------------------------------End The ROW1------------------------------------------>
+            <!-----------------------------Start The ROW2------------------------------------------>
+            <div class="row text-center row2">
+                <div class="searchBtns mt-3 ">
+                    <div onclick="getSearchMood(this.id)" id="searchName" class="btn btn-primary searchName">Search by
+                        Name</div>
+                    <div onclick="getSearchMood(this.id)" id="searchCategory"
+                        class="btn btn-primary ml-3 searchCategory">Search by Category</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------End The Outputs------------------------------------------>
+
+    <!-------------------------------Start The Table------------------------------------------>
+
+    <div class="container mt-4">
+        <div id="deleteAll">
+
+        </div>
+        <table class="tab text-center w-100">
+            <thead class="head text-uppercase">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Taxes</th>
+                <th>Discout</th>
+                <th>Total</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tBoody">
+            </tbody>
+        </table>
+    </div>
+    <!--------------------------------End The Table------------------------------------------>
+    <script src="/js/popper.min.js"></script>
+    <script src="./js/jquery-3.6.3.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
